@@ -1,5 +1,5 @@
 {
-  "name": "stoooreee",
+  "name": "midtrans-sample-store",
   "version": "1.0.0",
   "description": "midtrans sample store for snap",
   "scripts": {
@@ -12,15 +12,15 @@
     "postinstall": "npm run build",
     "sandbox": "NODE_ENV=sandbox npm start"
   },
-  "keywords": [],
+    "keywords": ["veritrans","example", "demo", "sample-store","reference"],
   "author": "Dion Dirza",
-  "license": "ISC",
+  "license": "Apache",
   "engines": {
     "node": "4.4.3"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@gitlab.dev.veritrans.co.id:rubicon/sample-store-ui.git"
+    "url": "git@github.com:veritrans/sample-store.git"
   },
   "dependencies": {
     "accounting": "^0.4.1",

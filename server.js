@@ -48,7 +48,7 @@ app.post('/charge', function (req, res) {
         price: 20000,
         quantity: 1,
         name: 'Veritrans Bear'
-      }],
+      }]
     }
   }, function (error, response, body) {
 
@@ -59,7 +59,7 @@ app.post('/charge', function (req, res) {
       });
     }
 
-    res.json(body);
+    return res.json(body);
   });
 });
 
