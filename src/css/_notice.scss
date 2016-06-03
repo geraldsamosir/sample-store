@@ -1,0 +1,107 @@
+.notice {
+  position: relative;
+  border-bottom: 1px solid;
+  padding: 8px 16px;
+  .content {
+  	font-size: 1.3rem;
+  	&.large {
+  		font-size: 1.6rem;
+  	}
+  }
+  color: $color-1;
+  border-color: $color-5;
+  background-color: $color-5;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+  &.primary {
+    color: $color-1;
+    border-color: $color-5;
+    background-color: $color-5;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+  }
+  &.success {
+    color: $success-text;
+    border-color: lighten($success-text, 70%);
+    background-color: lighten($success-text, 70%);
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+  }
+  &.warning {
+    color: $warning-text;
+    border-color: $warning-bg;
+    background-color: $warning-bg;
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+  }
+  &.danger {
+    color: $danger-bg;
+    border-color: lighten($danger-bg, 20%);
+    background-color: lighten($danger-bg, 20%);
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    -webkit-background-size: 4px 4px;
+    -moz-background-size: 4px 4px;
+    background-size: 4px 4px;
+  }
+  &.has-close {
+    .content {
+      width: calc(100% - 32px);
+    }
+  }
+  .notice-close-wrapper {
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin: 16px 16px;
+    z-index: 1000;
+    .touch-area {
+      width: 36px;
+      height: 36px;
+      display: block;
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      span {
+        margin: 10px;
+      }
+      &:hover {
+        background-color: $base-6;
+      }
+    }
+    &.primary .touch-area {
+      .touch-area {
+
+      }
+    }
+    &.success {
+      .touch-area {
+        &:hover {
+          background-color: lighten($success-bg,10%);
+        }
+      }
+    }
+  }
+}

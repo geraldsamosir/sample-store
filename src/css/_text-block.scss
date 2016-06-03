@@ -1,0 +1,29 @@
+.content-text-block {
+	padding-top: 16px;
+	background-color: $base-6;
+	display: table;
+	opacity: 1;
+	width: 100%;
+	> div {
+  		box-sizing: border-box;
+	}
+	transition: opacity 2s;
+	&.hide {
+		opacity: 0;
+		display: none;
+	}
+}
+.text-block {
+	.text-body-title {
+		line-height: 32px;
+		vertical-align: middle;
+	}
+	.text-body {
+		padding-bottom: 16px;
+		width: 100%;
+		word-break: break-word;
+	}
+	p {
+		margin: 0;
+	}
+}

@@ -1,0 +1,71 @@
+.negative {
+  border-color: $color-5;
+  background-color: $color-5;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  margin: 0 auto;
+  padding: 16px;
+  text-align: center;
+  .bottom {
+    position: absolute;
+    bottom: 28px;
+    width: calc(100% - 32px);
+    hr {
+      margin-bottom: 16px;
+    }
+  }
+  .primary {
+    color: $color-2;
+  }
+  .danger {
+    color: $danger-bg;
+  }
+  &.danger {
+    border-color: lighten($danger-bg, 20%);
+    background-color: lighten($danger-bg, 20%);
+    background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+    background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+
+  }
+
+  .checkmark, .ellipsismark, .xmark {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+    margin-top: 32px;
+  }
+  .checkmark {
+    background-color: transparent;
+    border: 4px solid $color-2;
+    box-sizing: border-box;
+    &:after {
+      margin: 12px 24px;
+      width: 20px;
+      height: 40px;
+      border: solid $color-2;
+      border-width: 0 6px 6px 0;
+    }
+  }
+  .xmark {
+    background-color: transparent;
+    border: 4px solid $danger-bg;
+    &:after, &:before {
+      margin: 18px 32px;
+      width: 0px;
+      height: 36px;
+      border: solid $danger-bg;
+      border-width: 0 6px 6px 0;
+    }
+  }
+}

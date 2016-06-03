@@ -1,0 +1,110 @@
+.bank-sprite {
+	background-image: url('../../images/bank-sprite.png');
+	background-size: 488px 46px;
+	background-repeat: no-repeat;
+	display: block;
+	height: 14px;
+
+	&.bca {
+		background-position: 0 0;
+		width: 46px;
+		&.inactive {
+			background-position: 0 -16px;
+		}
+		&.dark {
+			background-position: 0 -32px;
+		}
+	}
+	&.mandiri {
+		background-position: -48px 0;
+		width: 50px;
+		&.inactive {
+			background-position: -48px -16px;
+		}
+		&.dark {
+			background-position: -48px -32px;
+		}
+	}
+	&.permata {
+		background-position: -100px 0;
+		width: 58px;
+		&.inactive {
+			background-position: -100px -16px;
+		}
+		&.dark {
+			background-position: -100px -32px;
+		}
+	}
+	&.bri {
+		background-position: -160px 0;
+		width: 60px;
+		&.inactive {
+			background-position: -160px -16px;
+		}
+		&.dark {
+			background-position: -160px -32px;
+		}
+	}
+	&.bni {
+		background-position: -222px 0;
+		width: 50px;
+		&.inactive {
+			background-position: -222px -16px;
+		}
+		&.dark {
+			background-position: -222px -32px;
+		}
+	}
+	&.cimb {
+		background-position: -274px 0;
+		width: 98px;
+		&.inactive {
+			background-position: -274px -16px;
+		}
+		&.dark {
+			background-position: -274px -32px;
+		}
+	}
+
+	// 
+	&.visa {
+		background-position: -374px 0;
+		width: 44px;
+		&.inactive {
+			background-position: -374px -16px;
+		}
+		&.dark {
+			background-position: -374px -32px;
+		}
+	}
+	&.mastercard {
+		background-position: -420px 0;
+		width: 24px;
+		&.inactive {
+			background-position: -420px -16px;
+		}
+		&.dark {
+			background-position: -420px -32px;
+		}
+	}
+	&.jcb {
+		background-position: -446px 0;
+		width: 20px;
+		&.inactive {
+			background-position: -446px -16px;
+		}
+		&.dark {
+			background-position: -446px -32px;
+		}
+	}
+	&.card {
+		background-position: -468px -16px;
+		width: 20px;
+		&.normal {
+			background-position: -468px -16px;
+		}
+		&.error {
+			background-position: -468px 0;
+		}
+	}
+}

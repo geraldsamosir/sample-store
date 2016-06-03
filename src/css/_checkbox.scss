@@ -1,0 +1,230 @@
+.checkbox,
+.radio {
+	position: relative;
+	display: block;
+	margin: 16px 0;
+	padding: 0 16px;
+	margin-top: 16px;
+	margin-bottom: 16px;
+}
+.checkbox label,
+.radio label {
+	position: relative;
+	font-size: 1.3rem;
+	color: $base-1;
+	min-height: 20px;
+	padding-top: 2px;
+	margin-bottom: -2px;
+	font-weight: 400;
+	cursor: pointer;
+	display: block;
+	&:focus, &:active, &:hover {
+		outline: none;
+	}
+	p {
+		display: inline-block;
+		vertical-align: top;
+		margin-top: 0;
+		max-width: calc(100% - 48px);
+		.extra {
+			color: $base-3;
+		}
+	}
+	.action {
+		position: absolute;
+		top: 0;
+		right: -38px;
+		padding: 2px 4px;
+		border-radius: 50%;
+		i {
+		  vertical-align: middle;
+		  text-align: center;
+		  margin: 0;
+		  width: 14px;
+		  height: 14px;
+		  background-color: $base-3;
+		  border-radius: 50%;
+		}
+		&:hover i {
+		  background-color: $base-1;
+		}
+	}
+	.description {
+		display: block;
+		font-size: 1.2rem;
+		color: $base-3;
+		padding-top: 8px;
+	}
+}
+.checkbox,
+.radio {
+	&.has-hint {
+		label p {
+			max-width: calc(100% - 48px - 40px);
+		}
+	}
+}
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+	position: absolute;
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	top: 0;
+	padding: 0;
+	margin-top: 2px;
+	cursor: pointer;
+	border: 1px solid $base-3;
+	box-sizing: border-box;
+	&:focus, &:active, &:hover {
+		outline: none;
+	}
+	&:checked {
+		border: 1px solid $color-2;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 4px;
+			height: 8px;
+			left: 5px;
+			top: 2px;
+			border: solid $base-6;
+			border-width: 2px 0 0 2px;
+			transform: rotate(-135deg); 
+		}
+		&:before {
+			content: "";
+			position: absolute;
+			width: 14px;
+			height: 14px;
+			top: 0;
+			left: 0;
+			background-color: $color-2;
+			box-sizing: border-box;
+		}
+	}
+}
+
+// ERROR
+.input-group.error {
+	.checkbox,
+	.checkbox-inline,
+	.radio,
+	.radio-inline {
+		label {
+			.description {
+				color: $danger-bg;
+			}
+		}
+		input[type=checkbox],
+		input[type=radio] {
+			border-color: $danger-bg;
+			&:checked {
+				border-color: $color-2;
+			}
+		}
+	}
+}
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+	border-radius: 50%;
+	&:checked {
+		background: $color-2;
+		border-color: $color-2;
+		&:after {
+			content: "";
+			position: absolute;
+			width: 6px;
+			height: 6px;
+			border-radius: 50%;
+			background-color: $base-6;
+			border: none;
+			transform: none;
+			top: 4px;
+			left: 4px;
+		}
+		&:before {
+			border-radius: 50%;
+		}
+	}
+}
+.checkbox-left,
+.radio-left {
+	label {
+		padding-left: 36px;
+		width: 100%;
+	}
+	input {
+		left: 0;
+	}
+}
+.checkbox-right,
+.radio-right {
+	label {
+		padding-left: 0;
+		width: calc(100% - 36px);
+	}
+	input {
+		right: -36px;
+	}
+}
+
+.checkbox + .checkbox,
+.radio + .radio {
+	margin-top: -5px;
+}
+.checkbox-inline,
+.radio-inline {
+	position: relative;
+	display: inline-block;
+	padding-left: 20px;
+	margin-bottom: 0;
+	font-weight: 400;
+	vertical-align: middle;
+	cursor: pointer;
+}
+.checkbox-inline + .checkbox-inline,
+.radio-inline + .radio-inline {
+	margin-top: 0;
+	margin-left: 10px;
+}
+fieldset[disabled] input[type=checkbox],
+fieldset[disabled] input[type=radio],
+input[type=checkbox].disabled,
+input[type=checkbox][disabled],
+input[type=radio].disabled,
+input[type=radio][disabled] {
+	cursor: not-allowed;
+}
+.checkbox-inline.disabled,
+.radio-inline.disabled,
+fieldset[disabled] .checkbox-inline,
+fieldset[disabled] .radio-inline {
+	cursor: not-allowed;
+}
+.checkbox.disabled label,
+.radio.disabled label,
+fieldset[disabled] .checkbox label,
+fieldset[disabled] .radio label {
+	cursor: not-allowed;
+}
+.checkbox.disabled,
+.checkbox-inline.disabled,
+.radio.disabled,
+.radio-inline.disabled {
+	input {
+		border-color: $base-4;
+	}
+	label {
+		color: $base-4;
+	}
+	p, a, span {
+		color: $base-4;
+	}
+	i {
+		opacity: .3;
+	}
+
+}

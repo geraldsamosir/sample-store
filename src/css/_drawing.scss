@@ -1,0 +1,46 @@
+.checkmark {
+  display:inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '';
+    display: block;
+    transform: rotate(45deg);
+    // Var
+    width: 3px;
+    height: 6px;
+    border: solid $base-1;
+    border-width: 0 3px 3px 0;
+  }
+}
+.xmark {
+  display:inline-block;
+  position: relative;
+  &:after, &:before {
+    position: absolute;
+    content: '';
+    display: block;
+    // Var
+    width: 0px;
+    height: 6px;
+    border: solid $base-1;
+    border-width: 0 3px 3px 0;
+  }
+  &:before {
+    transform: rotate(-45deg);
+  }
+  &:after {    
+    transform: rotate(45deg);
+  }
+}
+.ellipsismark {
+  display: inline-block;
+  position: relative;
+  &:after {
+    position: absolute;
+    content: '...';
+    display: block;
+    // Var
+    border: 0;
+  }
+}

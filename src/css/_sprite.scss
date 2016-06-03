@@ -1,0 +1,289 @@
+.sprite {
+	background-image: url('../../images/sprite.png');
+	background-size: 160px 350px;
+	background-repeat: no-repeat;
+	display: block;
+
+	&.header-prev {
+		background-position: 0 0;
+		width: 16px;
+		height: 16px;
+	}
+	&.header-next {
+		background-position: -18px 0;
+		width: 16px;
+		height: 16px;
+	}
+
+	&.btn-main-prev {
+		background-position: -36px 0;
+		width: 16px;
+		height: 16px;
+	}
+	&.btn-main-next {
+		background-position: -54px 0;
+		width: 16px;
+		height: 16px;
+	}
+	&.btn-main-done {
+		background-position: -126px 0;
+		width: 16px;
+		height: 16px;
+	}
+
+	&.subheader-cart {
+		background-position: -72px 0;
+		width: 16px;
+		height: 16px;
+	}
+
+	&.modal-close {
+		background-position: -90px 0;
+		width: 16px;
+		height: 16px;
+	}
+	&.modal-close-dark {
+		background-position: -108px 0;
+		width: 16px;
+		height: 16px;
+	}
+
+	&.list-prev {
+		background-position: 0 -18px;
+		width: 12px;
+		height: 12px;
+	}
+	&.list-next {
+		background-position: -14px -18px;
+		width: 12px;
+		height: 12px;
+	}
+	&.question {
+		background-position: -28px -18px;
+		width: 12px;
+		height: 12px;
+	}
+	&.asterisk {
+		background-position: -42px -18px;
+		width: 12px;
+		height: 12px;
+	}
+	&.asterisk-dark {
+		background-position: -56px -18px;
+		width: 12px;
+		height: 12px;
+	}
+
+	// Payment Channels
+	&.credit-card {
+		background-position: 0px -32px;
+		width: 40px;
+		height: 40px;
+	}
+	&.bank-transfer {
+		background-position: -40px -32px;
+		width: 40px;
+		height: 40px;
+	}
+	&.cimb-clicks {
+		background-position: -80px -32px;
+		width: 40px;
+		height: 40px;
+	}
+	&.xl-tunai {
+		background-position: 0px -72px;
+		width: 40px;
+		height: 40px;
+	}
+	&.indomaret {
+		background-position: -40px -72px;
+		width: 40px;
+		height: 40px;
+	}
+	&.indosat-dompetku {
+		background-position: -80px -72px;
+		width: 40px;
+		height: 40px;
+	}
+	&.bri-epay {
+		background-position: 0px -112px;
+		width: 40px;
+		height: 40px;
+	}
+	&.mandiri-clickpay {
+		background-position: -40px -112px;
+		width: 40px;
+		height: 40px;
+	}
+	&.telkomsel-cash {
+		background-position: -80px -112px;
+		width: 40px;
+		height: 40px;
+	}
+	&.mandiri {
+		background-position: 0px -152px;
+		width: 40px;
+		height: 40px;
+	}
+	&.mandiri-ecash {
+		background-position: -40px -152px;
+		width: 40px;
+		height: 40px;
+	}
+	&.bca-klikpay {
+		background-position: -80px -152px;
+		width: 40px;
+		height: 40px;
+	}
+	&.bca-klikbca {
+		background-position: 0px -192px;
+		width: 40px;
+		height: 40px;
+	}
+	&.mandiri-bill {
+		background-position: -40px -192px;
+		width: 40px;
+		height: 40px;
+	}
+	&.bbm-money {
+		background-position: -80px -192px;
+		width: 40px;
+		height: 40px;
+	}
+
+	// Banks
+	&.bca {
+		background-position: 0px -232px;
+		width: 40px;
+		height: 40px;
+	}
+	&.mandiri {
+		background-position: -40px -232px;
+		width: 40px;
+		height: 40px;
+	}
+	&.permata {
+		background-position: -80px -232px;
+		width: 40px;
+		height: 40px;
+	}
+	&.prima {
+		background-position: 0px -272px;
+		width: 40px;
+		height: 40px;
+	}
+	&.atm-bersama {
+		background-position: -40px -272px;
+		width: 40px;
+		height: 40px;
+	}
+	&.alto {
+		background-position: -80px -272px;
+		width: 40px;
+		height: 40px;
+	}
+
+	&.icon {
+		display: inline-block;
+		vertical-align: middle;
+		margin-right: 8px;
+		margin-top: -2px;
+		&.info {
+			background-position: -144px 0;
+			width: 16px;
+			height: 16px;
+		}
+		&.question-mark {
+			background-position: -27px -17px;
+			width: 16px;
+			height: 16px;
+			background-color: white;
+			border: 1px solid $base-5;
+			border-radius: 50%;
+			
+		}
+		&.x-mark {
+			background-position: -69px -17px;
+			width: 14px;
+			height: 14px;
+		}
+		.chevron-down {
+			background-position: -83px -17px;
+			width: 14px;
+			height: 14px;
+		}
+		.chevron-up {
+			background-position: -97px -17px;
+			width: 14px;
+			height: 14px;
+		}
+		&.key {
+			&.green {
+				background-position: -126px -18px;
+				width: 16px;
+				height: 16px;
+			}
+			&.dark {
+				background-position: -126px -36px;
+				width: 16px;
+				height: 16px;
+			}
+		}
+		&.padlock {
+			&.green {
+				background-position: -144px -18px;
+				width: 16px;
+				height: 16px;
+			}
+			&.dark {
+				background-position: -144px -36px;
+				width: 16px;
+				height: 16px;
+			}
+		}
+		&.pencil {
+			background-position: -126px -54px;
+			width: 16px;
+			height: 16px;
+		}
+	}
+}
+.bbm-sprite {
+	background-image: url('../../images/bbm-sprite.png');
+	background-size: 396px 40px;
+	background-repeat: no-repeat;
+	display: inline-block;
+	margin: 0 auto;
+
+	// BBM Money
+	&.bbm-button {
+		background-position: 0px 0px;
+		width: 40px;
+		height: 40px;
+		display: inline-block;
+	}
+	&.app-store {
+		background-position: -41px 0px;
+		width: 118px;
+		height: 40px;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	&.google-play {
+		background-position: -159px 0px;
+		width: 118px;
+		height: 40px;
+		&:hover {
+			opacity: .7;
+		}
+	}
+	&.blackberry-world {
+		background-position: -277px 0px;
+		width: 118px;
+		height: 40px;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

@@ -1,0 +1,67 @@
+.input-group {
+  .fakeselect {
+    position: relative;
+    height: 32px;
+    width: 100%;
+  }
+  .fakeselect select {
+    position: absolute;
+    right: 0;
+    top: 0;
+    font-size: 0px;
+    height: 32px;
+    width: 32px;
+    border-bottom: 1px solid $base-4;
+    color: $base-1;
+    &:focus,
+    &.show-label {
+      outline: none;
+      &::-webkit-input-placeholder {
+        color: $base-3;
+      }
+      &:-moz-placeholder {
+        color: $base-3;
+      }
+      &::-moz-placeholder {
+        color: $base-3;
+      }
+      &:-ms-input-placeholder {
+        color: $base-3;
+      }
+    }
+  }
+  // LABEL
+  .fakeselect {
+    input ~ label,
+    select ~ label {
+      color: $base-3;
+      font-size: 16px;
+      font-weight: $font-regular;
+      position: absolute;
+      pointer-events: none;
+      left: 4px;
+      top: 6px;
+      transition: 0.2s ease all;
+      -moz-transition: 0.2s ease all;
+      -webkit-transition: 0.2s ease all;
+    }
+    // Active state
+    input:focus ~ label,
+    select:focus ~ label {
+      top: calc(-1.2rem - 4px);
+      left: 0px;
+      font-size: 1.2rem;
+      color: $color-2;
+    }
+    // Typed in
+    input.filled ~ label,
+    input.show-label ~ label,
+    select.filled ~ label,
+    select.show-label ~ label {
+      top: calc(-1.2rem - 4px);
+      left: 0px;
+      font-size: 1.2rem;
+      color: $base-3;
+    }
+  }
+}

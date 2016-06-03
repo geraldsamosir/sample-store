@@ -1,0 +1,167 @@
+.modal {
+	position: relative;
+	left: 0px;
+}
+.modal-dialog {
+  position: fixed;
+  top: 16px;
+  left: 16px;
+  right: 16px;
+  height: auto;
+  z-index: 6001;
+  overflow: hidden;
+  background-color: $base-6;
+  &.full {
+    height: calc(100% - 32px);
+    .modal-content {
+      height: 100%;
+    }
+  }
+  &.center {
+    top: 50%;
+    transform: translateY(-50%);
+  }
+}
+.modal-header {
+	width: 100%;
+	height: 48px;
+	background-color: $base-6;
+  border-bottom: 1px solid $base-5;
+	display: table;
+}
+.modal-body {
+  height: 100%;
+}
+.modal-header + .modal-body {
+  height: calc(100% - 48px);
+}
+.modal .subheader {
+  height: 42px;
+  padding: 9px 16px;
+}
+@media only screen and (min-width:568px) {
+  .modal-dialog {
+    max-width: 388px;
+    left: 50%;
+    margin-left: -194px;
+    max-height: 608px;
+    top: 50%;
+    margin-top: -304px;
+    box-shadow: 0 5px 10px #000;
+    border-radius: 5px;
+    overflow: hidden;
+    &.center {
+      margin-top: auto;
+      transform: translateY(-50%);
+    }
+  }
+}
+@media only screen and (max-height:639px) {
+  .modal-dialog {
+    top: 16px;
+    margin-top: 0;
+    overflow: hidden;
+    &.full {
+      height: calc(100% - 32px);
+    }
+  }
+}
+@media only screen and (min-width:568px) and (min-height:640px) {
+  .modal-dialog {
+    &.full {
+      height: 608px;
+    }
+  }
+}
+.modal-title {
+	width: 100%;
+	display: table-cell;
+	vertical-align: middle;
+}
+.modal-close-wrapper {
+	position: absolute;
+	right: 0;
+	top: 0;
+	margin: 16px 16px;
+	z-index: 6001;
+	.touch-area {
+		width: 48px;
+		height: 48px;
+		display: block;
+		position: absolute;
+		top: -16px;
+		right: -16px;
+		&:hover {
+			background-color: $color-2;
+		}
+		span {
+			margin: 16px;
+		}
+	}
+}
+
+.modal.modal-normal {
+	.modal-dialog {
+		height: auto;
+	}
+	.modal-header {
+		background-color: transparent;
+		h4 {
+			color: $base-1;
+			text-align: left;
+		}
+	}
+	.modal-close-wrapper {
+		.touch-area {
+			&:hover {
+				background-color: $base-5;
+			}
+		}
+	}
+}
+.modal.modal-auth {
+	.modal-dialog {
+		height: auto;
+	}
+	.modal-header {
+		background-color: transparent;
+		border-bottom: 1px solid $base-5;
+		h4 {
+			color: $base-1;
+			font-size: 1.4rem;
+		}
+	}
+	.modal-close-wrapper {
+		.touch-area {
+			&:hover {
+				background-color: $base-5;
+			}
+		}
+	}
+
+}
+.modal-footer {
+	&.with-border {
+		border-top: 1px solid $base-5;
+	}
+}
+
+.modal-backdrop {
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	z-index: 6000;
+	background: rgba(0,0,0,.8);
+	overflow: hidden;
+}
+
+.modal .content-table {
+  left: 0;
+  right: 0;
+  padding-bottom: 32px;
+}
+.modal-body .content {
+  margin: 0 16px;
+}

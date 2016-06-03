@@ -1,0 +1,5 @@
+{
+  "apiBaseURL": "https://app.sandbox.veritrans.co.id/snap",
+  "serverKey": "SERVER_KEY",
+  "clientKey": "CLIENT_KEY"
+}

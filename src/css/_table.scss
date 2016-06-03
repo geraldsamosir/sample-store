@@ -1,0 +1,82 @@
+.content-table {
+	height: 100%;
+  width: 100%;
+	position: relative;
+}
+table {
+	background-color: $base-6;
+	min-width: calc(100% - 32px);
+	border-collapse: separate;
+	margin: 16px 16px 0;
+	tr {
+	}
+	th {
+		height: 32px;
+	}
+	td {
+		height: 42px;
+	}
+	td, th {
+		padding: 0 4px;
+		border-bottom: 1px solid $base-5;
+	}
+	tr:last-child {
+		td, th {
+			border-bottom: 0px;
+			padding-bottom: 4px;
+		}
+	}
+}
+.table-item {
+	text-align: left;
+	white-space: nowrap;
+	.item-name {
+		display: inline-block;
+		max-width: 156px; /* This needs to be dynamic */
+		text-overflow: ellipsis;
+		white-space: nowrap;
+		overflow: hidden;
+		vertical-align: middle;
+	}
+	.quantity {
+		overflow: visible;
+		display: inline-block;
+		vertical-align: middle;
+	}
+}
+.table-amount {
+	max-width: 78px;
+	text-align: right;
+}
+
+td.table-numeric {
+	width: 24px;
+}
+td.table-row {
+	padding: 16px 0;
+	vertical-align: top;
+}
+td.table-img {
+	width: 74px;
+	padding-right: 16px;
+}
+
+table.main-table {
+	background-color: transparent;
+	color: $color-2;
+	font-size: 1.0rem;
+	padding: 0;
+	margin: 0;
+	width: 100%;
+	tr {
+		th, td {
+			height: 24px;
+			border-bottom: 1px solid $color-4;
+		}
+		&:last-child {
+			th, td {
+				border-bottom: 0;
+			}
+		}
+	}
+}

@@ -1,0 +1,64 @@
+hr {
+	border: none;
+	border-bottom: 1px solid $base-4;
+	margin: 8px 0;
+	&.color {
+		border-bottom: 1px solid $color-4;
+	}
+	&.success {
+		border-color: $success-text;
+	}
+	&.danger {
+		border-color: $danger-bg;
+	}
+	&.pending {
+		border-color: $pending-text;
+	}
+}
+hr.full {
+	margin: 8px -16px;
+	padding: 0 16px;
+	overflow: auto;
+	float: left;
+	width: 100%;
+}
+.text-regular {
+	font-weight: $font-regular;
+}
+.text-bold {
+	font-weight: $font-bold;
+}
+
+.text-left {
+	text-align: left;
+}
+.text-center {
+	text-align: center;
+}
+.text-right {
+	text-align: right;
+}
+.pull-left {
+	float: left;
+}
+.pull-right {
+	float: right;
+}
+.text-wrap {
+	white-space: normal;
+}
+.text-nowrap {
+	white-space: nowrap;
+}
+.inline {
+	display: inline-block;
+}
+.invisible {
+	visibility: hidden;
+}
+.hidden {
+	display: none;
+}
+.scroll {
+	overflow-y: auto;
+}

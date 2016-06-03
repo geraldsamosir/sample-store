@@ -1,0 +1,23 @@
+.card-container {
+  background-color: #fff;
+  float: left;
+  width: calc(100% - 16px);
+  margin: 8px;
+  border-bottom: 1px solid #ccc;
+  &.full {
+    top: 0;
+    bottom: 0px;
+    height: calc(100% - 16px);
+  }
+  &.transparent {
+    background: transparent;
+    border-bottom: 0;
+  }
+}
+.card-container + .card-container {
+  margin-top: 0px;
+}
+.card-title {
+  padding: 8px 16px;
+  border-bottom: 1px solid $base-5;
+}

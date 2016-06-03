@@ -1,0 +1,68 @@
+.final-panel {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  max-height: calc(100% - 16px);
+  margin: 0 auto 16px;
+  padding: 16px;
+  &.success {
+    // background-color: $success-bg;
+    color: $success-text;
+  }
+  &.pending {
+    // background-color: $pending-bg;
+    color: $pending-text;
+  }
+  &.failed {
+    // background-color: $danger-bg;
+    color: $danger-bg;
+  }
+  .bottom {
+    position: absolute;
+    bottom: 0;
+    width: calc(100% - 32px);
+    hr {
+      margin-bottom: 16px;
+    }
+  }
+  .checkmark, .ellipsismark, .xmark {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    margin-bottom: 32px;
+  }
+  .checkmark {
+    background-color: transparent;
+    border: 2px solid $success-text;
+    box-sizing: border-box;
+    &:after {
+      margin: 6px 12px;
+      width: 9px;
+      height: 18px;
+      border: solid $success-text;
+      border-width: 0 3px 3px 0;
+    }
+  }
+  .ellipsismark {
+    background-color: transparent;
+    border: 2px solid $pending-text;
+    &:after {
+      margin: -9px 6px;
+      width: 9px;
+      height: 18px;
+      color: $pending-text;
+      font-size: 28px;
+    }
+  }
+  .xmark {
+    background-color: transparent;
+    border: 2px solid $danger-bg;
+    &:after, &:before {
+      margin: 8px 15px;
+      width: 0px;
+      height: 18px;
+      border: solid $danger-bg;
+      border-width: 0 3px 3px 0;
+    }
+  }
+}

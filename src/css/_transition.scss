@@ -1,0 +1,102 @@
+/* Main container transition */
+.main-back-enter {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.main-back-enter.main-back-enter-active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+}
+.main-back-leave {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.main-back-leave.main-back-leave-active {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  transform: translateX(100%);
+}
+.main-next-enter {
+  -webkit-transform: translateX(100%);
+  -moz-transform: translateX(100%);
+  transform: translateX(100%);
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.main-next-enter.main-next-enter-active {
+  -webkit-transform: translateX(0);
+  -moz-transform: translateX(0);
+  transform: translateX(0);
+}
+.main-next-leave {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+}
+.main-next-leave.main-next-leave-active {
+  -webkit-transform: translateX(-100%);
+  -moz-transform: translateX(-100%);
+  transform: translateX(-100%);
+}
+
+/* Button Transition */
+.button-main,
+.pop-wrapper {
+  -webkit-transition: all .5s ease;
+  -moz-transition: all .5s ease;
+  transition: all .5s ease;
+  -webkit-transform: translateY(100%);
+  -moz-transform: translateY(100%);
+  transform: translateY(100%);
+  opacity: 0;
+}
+.button-main.show,
+.pop-wrapper.show {
+  -webkit-transform: translateY(0);
+  -moz-transform: translateY(0);
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+/* Fade Transition */
+.fade-enter {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+.fade-enter.fade-enter-active {
+  opacity: 1;
+}
+
+.fade-leave {
+  opacity: 1;
+}
+.fade-leave.fade-leave-active {
+  overflow: hidden;
+  opacity: 0;
+  transition: opacity .3s ease-in;
+}
+
+/* Modal Transition */
+.modal-dialog,
+.modal-backdrop-enter,
+.modal-backdrop-leave {
+  -webkit-transition: all .3s;
+  -moz-transition: all .3s;
+  transition: all .3s;
+}
+.modal-backdrop-enter,
+.modal-backdrop-leave.modal-backdrop-leave-active {
+  opacity: 0;
+}
+.modal-backdrop-enter.modal-backdrop-enter-active {
+  opacity: 1;
+}

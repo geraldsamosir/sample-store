@@ -1,0 +1,230 @@
+.toggle {
+  position: relative;
+  display: block;
+  margin: 16px 0;
+  padding: 0 16px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  label {
+    position: relative;
+    font-size: 1.3rem;
+    color: $base-1;
+    min-height: 20px;
+    padding-top: 2px;
+    margin-bottom: -2px;
+    font-weight: 400;
+    cursor: pointer;
+    display: block;
+    &:focus, &:active, &:hover {
+      outline: none;
+    }
+    p {
+      display: inline-block;
+      vertical-align: top;
+      margin-top: 0;
+      max-width: calc(100% - 48px);
+      .extra {
+        color: $base-3;
+      }
+    }
+    .action {
+      position: absolute;
+      top: 0;
+      right: -38px;
+      padding: 2px 4px;
+      border-radius: 50%;
+      i {
+        vertical-align: middle;
+        text-align: center;
+        margin: 0;
+        width: 14px;
+        height: 14px;
+        background-color: $base-3;
+        border-radius: 50%;
+      }
+      &:hover i {
+        background-color: $base-1;
+      }
+    }
+    .description {
+      display: block;
+      font-size: 1.2rem;
+      color: $base-3;
+      padding-top: 8px;
+    }
+  }
+  &.has-hint {
+    label p {
+      max-width: calc(100% - 48px - 40px);
+    }
+  }
+}
+
+.toggle input[type=checkbox],
+.toggle-inline input[type=checkbox] {
+  position: absolute;
+  width: 36px;
+  height: 24px;
+  top: 0;
+  padding: 0;
+  margin-top: -2px;
+  cursor: pointer;
+  border: transparent;
+  background: transparent;
+  &:focus, &:active, &:hover {
+    outline: none;
+  }
+  &:before {
+    content: "";
+    position: absolute;
+    width: 36px;
+    height: 24px;
+    top: 0;
+    background: $base-3;
+    border-radius: 12px;
+    transition: color .2s;
+  }
+  &:after {
+    content: "";
+    position: absolute;
+    width: 18px;
+    height: 18px;
+    left: 3px;
+    top: 3px;
+    background: $base-6;
+    border-radius: 50%;
+    transition: left .2s;
+  }
+  &:checked {
+    &:before {
+      background: $color-2;
+    }
+    &:after {
+      left: 15px;
+    }
+  }
+}
+.toggle.small,
+.toggle-inline.small {
+  input[type=checkbox] {
+    width: 24px;
+    height: 16px;
+    margin-top: 2px;
+    &:before {
+      width: 24px;
+      height: 16px;
+      top: 0;
+      border-radius: 8px;
+    }
+    &:after {
+      width: 10px;
+      height: 10px;
+      left: 3px;
+      top: 3px;
+    }
+    &:checked {
+      &:after {
+        left: 11px;
+      }
+    }
+  }
+}
+// ERROR
+.input-group.error {
+  .toggle,
+  .toggle-inline {
+    label {
+      .description {
+        color: $danger-bg;
+      }
+    }
+    input[type=checkbox] {
+      &:before {
+        background: $base-6;
+        border: 1px solid $danger-bg;
+      }
+      &:after {
+        background: $danger-bg;
+      }
+      &:checked {
+        &:before {
+          background: $base-6;
+          border: 1px solid $danger-bg;
+        }
+        &:after {
+          background: $danger-bg;
+        }
+      }
+    }
+  }
+}
+
+.toggle-left {
+  label {
+    padding-left: 54px;
+    width: 100%;
+  }
+  input {
+    left: 0;
+  }
+}
+.toggle-right {
+  label {
+    padding-left: 0;
+    width: calc(100% - 54px);
+  }
+  input {
+    right: -54px;
+  }
+}
+
+.toggle + .toggle {
+  margin-top: -5px;
+}
+.toggle-inline {
+  position: relative;
+  display: inline-block;
+  padding-left: 20px;
+  margin-bottom: 0;
+  font-weight: 400;
+  vertical-align: middle;
+  cursor: pointer;
+}
+.toggle-inline + .toggle-inline {
+  margin-top: 0;
+  margin-left: 10px;
+}
+
+.toggle-inline.disabled
+fieldset[disabled] .toggle-inline {
+  cursor: not-allowed;
+}
+.toggle.disabled label
+fieldset[disabled] .toggle label {
+  cursor: not-allowed;
+}
+.toggle.disabled,
+.toggle-inline.disabled {
+  label {
+    cursor: not-allowed;
+    color: $base-4;
+  }
+  input {
+    cursor: not-allowed;
+    &:before {
+      border: 1px solid $base-4;
+      background: $base-6;
+    }
+    &:after {
+      border: 1px solid $base-4;
+      background: $base-4;
+    }
+  }
+  p, a, span {
+    color: $base-4;
+  }
+  i {
+    opacity: .3;
+  }
+
+}

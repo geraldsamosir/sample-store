@@ -1,0 +1,162 @@
+.btn {
+	display: block;
+	height: 42px;
+	vertical-align: middle;
+	text-align: center;
+	color: $base-6;
+	text-decoration: none;
+
+	// By Width
+	&.full {
+		width: 100%;
+		margin: 16px 0;
+	}
+	&.long {}
+	&.short {}
+	&.auto {}
+
+	// By Height
+	&.sm {}
+	&.md {}
+	&.lg {}
+
+	// By Color
+	&.primary {
+		background-color: $color-2;
+		color: $base-6;
+		&:hover {
+			background-color: $color-1;
+		}
+	}
+	&.disabled {
+		background-color: $color-4;
+		color: $base-6;
+		&:hover {
+			background-color: $color-4;
+		}
+	}
+	&.success {
+		background-color: $success-bg;
+		color: $success-text;
+		border: 1px solid $success-text;
+		&:hover {
+			background-color: $success-text;
+			color: $success-bg;
+		}
+	}
+	&.warning {
+		background-color: $warning-bg;
+		color: $warning-text;
+		border: 1px solid $warning-text;
+		&:hover {
+			background-color: $warning-text;
+			color: $warning-bg;
+		}
+	}
+	&.danger {
+		background-color: $danger-bg;
+		color: $danger-text;
+		border: 1px solid $danger-text;
+		&:hover {
+			background-color: $danger-text;
+			color: $danger-bg;
+		}
+	}
+	&.gray,
+	&.grey {
+		background-color: $base-3;
+		color: $base-6;
+		border: 1px solid $base-3;
+		padding: 0 8px;
+		&:hover {
+			background-color: $base-2;
+			border-color: $base-2;
+		}
+	}
+	&.transparent {
+		background-color: transparent;
+		padding: 0 16px;
+		display: inline-block;
+		vertical-align: middle;
+		color: $color-2;
+		font-weight: $font-bold;
+		line-height: 56px;
+		height: 56px;
+		vertical-align: middle;
+		&.bold {
+			color: $color-2;
+			font-weight: $font-bold;
+		}
+		&.regular {
+			color: $color-2;
+			font-weight: $font-regular;
+		}
+		&.bold,
+		&.regular {
+			&:hover {
+				background-color: $color-5;
+			}
+		}
+		&.base {
+			color: $base-3;
+			font-weight: $font-regular;
+			&:hover {
+				background-color: $base-5;
+			}
+		}
+		&.danger {
+			color: $danger-bg;
+			font-weight: $font-regular;
+			&:hover {
+				background-color: lighten($danger-bg, 20%);
+				border-color: lighten($danger-bg, 20%);
+			}
+		}
+	}
+	&.outline {
+		background-color: transparent;
+		color: $color-2;
+		border: 1px solid $color-2;
+		padding: 0 8px;
+		&:hover {
+			background-color: $color-2;
+			color: $base-6;
+		}
+		&.thin {
+			height: 26px;
+			.text-button {
+				line-height: 26px;
+			}
+		}
+		&.gray,
+		&.grey {
+			color: $base-3;
+			border-color: $base-3;
+			&:hover {
+				color: $base-6;
+				border-color: $base-3;
+				background-color: $base-3;
+			}
+		}
+	}
+}
+
+.btn-circle-trans {
+	display: inline-block;
+	width: 16px;
+	height: 16px;
+	border-radius: 50%;
+	border: 1px solid $color-2;
+	color: $color-2;
+	background-color: transparent;
+	text-align: center;
+	&.disabled {
+		border: 1px solid $base-4;
+		color: $base-4;
+		cursor: default;
+	}
+	&:not(.disabled):hover, &:not(.disabled):focus {
+		background-color: $color-2;
+		color: $base-6;
+	}
+}

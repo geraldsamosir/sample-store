@@ -1,0 +1,5 @@
+/public/javascripts
+/public/stylesheets
+/public/*.gz
+/node_modules
+.DS_Store

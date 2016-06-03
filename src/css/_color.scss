@@ -1,0 +1,35 @@
+// Defaults
+$success-bg   : #CEFF8B;
+$success-text : #006837;
+$warning-bg   : #FFFF66;
+$warning-text : #555555;
+$danger-bg    : #FF6167;
+$danger-text  : #FFFFFF;
+$pending-bg	  : #CCF2FC;
+$pending-text : #008DB5;
+
+// Base
+$base-1       : #555555;
+$base-2       : #666666;
+$base-3       : #999999;
+$base-4       : #CCCCCC;
+$base-5       : #F2F2F2;
+$base-6       : #FFFFFF;
+
+// Theme: Navy Blue
+$theme-1: #0b3b70;
+$theme-2: #0e4e95;
+$theme-3: #3e71aa;
+$theme-4: #6e95bf;
+$theme-5: #cfdcea;
+$theme-x: #f8c400;
+$theme-y: darken($theme-x, 10%);
+
+// Theme
+$color-1      : $theme-1;
+$color-2      : $theme-2;
+$color-3      : $theme-3;
+$color-4      : $theme-4;
+$color-5      : $theme-5;
+$color-x      : $theme-x;
+$color-y      : $theme-y;

@@ -1,0 +1,169 @@
+// .app-container .button-main.hide + .container-fluid {
+//   padding-bottom: 0;
+// }
+// .app-container .pop-wrapper.hide + .container-fluid {
+//   padding-bottom: 0;
+// }
+// .app-container .button-main + .pop-wrapper + .container-fluid,
+// .app-container .pop-wrapper + .button-main + .container-fluid {
+//   padding-bottom: 114px;
+// }
+// .app-container .pop-wrapper + .container-fluid,
+// .app-container .pop-container + .container-fluid {
+//   padding-bottom: 62px;
+// }
+.button-main {
+  background-color: $color-2;
+  border-top: 1px solid $color-1;
+  width: 100%;
+  min-width: 320px;
+  height: 56px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  &:hover {
+    background-color: $color-3;
+    border-top: 1px solid $color-2;
+  }
+  &.disabled {
+    background-color: $base-4;
+    border-top: 1px solid $base-4;
+    .button-main-content {
+      cursor: default;
+    }
+    .text-button-main {
+      color: $base-3;
+    }
+    .btn-main-next, .btn-main-done {
+      opacity: .5;
+    }
+  }
+}
+@media screen and (min-width:568px) {
+  .button-main {
+    border-radius: 0 0 4px 4px;
+  }
+}
+.button-main-content {
+  display: block;
+  height: 42px;
+  vertical-align: middle;
+  text-decoration: none;
+  .btn-main-next, .btn-main-done, .btn-main-prev {
+    position: absolute;
+    top: 0;
+    margin: 20px 16px;
+  }
+  .btn-main-next, .btn-main-done {
+    right: 0;
+  }
+  .btn-main-prev {
+    left: 0;
+  }
+}
+
+@media only screen and (min-width:568px) {
+  .button-main {
+    position: absolute;
+    max-width: 420px;
+    .button-main-content {
+      z-index: 2;
+      &:before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 32px);
+        height: 74px;
+        margin-left: -16px;
+        bottom: -16px;
+        z-index: 1;
+      }
+    }
+  }
+}
+
+// Pop
+.pop-wrapper {
+  position: absolute;
+  z-index: 999;
+  width: 100%;
+  min-width: 320px;
+  bottom: 0;
+  min-height: 52px;
+  border-top: 1px solid $color-5;
+  color: $color-1;
+  border-color: $color-5;
+  background-color: $color-5;
+  background-image: -webkit-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -moz-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: -o-repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  background-image: repeating-linear-gradient(135deg, rgba(255,255,255,1), rgba(255,255,255,1) 1px, transparent 2px, transparent 2px, rgba(255,255,255,1) 3px);
+  -webkit-background-size: 4px 4px;
+  -moz-background-size: 4px 4px;
+  background-size: 4px 4px;
+
+  &.success {
+  }
+  &.warning {
+    border-top: 1px solid $warning-bg;
+    color: $warning-text;
+    border-color: $warning-bg;
+    background-color: $warning-bg;
+  }
+  &.danger {
+    border-top: 1px solid $danger-bg;
+    color: $danger-bg;
+    border-color: lighten($danger-bg, 20%);
+    background-color: lighten($danger-bg, 20%);
+  }
+  &.has-close {
+    .pop {
+      width: calc(100% - 32px);
+    }
+  }
+}
+.button-main.show + .pop-wrapper {
+  bottom: 56px;
+}
+
+// @media only screen and (min-width:568px) {
+//   .pop-wrapper {
+//     position: absolute;
+//     bottom: 0;
+//   }
+//   .button-main + .pop-wrapper {
+//     bottom: 56px;
+//   }
+// }
+
+.pop {
+  width: 100%;
+  min-height: 56px;
+  display: block;
+  // position: fixed;
+  left: 0;
+  padding: 16px;
+  z-index: 999;
+  &.disabled {
+    bottom: -56px;
+  }
+
+}
+.pop-close-wrapper {
+  position: absolute;
+  right: 0;
+  top: 0;
+  margin: 16px 16px;
+  z-index: 1000;
+  .touch-area {
+    width: 48px;
+    min-height: 56px;
+    display: block;
+    position: absolute;
+    top: -16px;
+    right: -16px;
+    span {
+      margin: 20px 16px;
+    }
+  }
+}
